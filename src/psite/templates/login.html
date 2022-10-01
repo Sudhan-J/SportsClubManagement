@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+ 
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+
+        content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+        body {
+
+            min-height: 100%;
+            min-width: min-content;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+        }
+
+         
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+         
+
+        h1 {
+
+            text-align:center;
+
+            color:black;
+
+            -webkit-text-stroke: 1px black;
+
+        }
+        h3{
+            text-align: center;
+            color : black;
+             -webkit-text-stroke: 1px black;
+        }
+
+         
+
+        /* styling background image */
+
+        .bg-img {
+
+            background-image: url(
+            "/static/psite/images/lgp.png");
+
+           width: 890px;
+           height: 750px;
+
+            background-size: cover;
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+        }
+        .vl {
+  border-left: 6px solid black;
+  height: 750px;
+  position: relative;
+  left: 100%;
+  margin-left: -3px;
+  top: 20;
+}
+
+     
+
+        /* Styling the form container */
+
+        .container {
+
+            position: absolute;
+            right: 100px;
+            top: 200px;
+            margin: 20px;
+            max-width: 300px;
+            padding: 16px;
+
+        }
+ 
+
+        b {
+
+            color: black;
+
+            font-size:21px;
+
+            -webkit-text-stroke: 1px black;
+
+        }
+
+     
+
+        /* Full-width input */
+
+        input[type=email],
+
+        input[type=password] {
+
+            width: 100%;
+
+            padding: 15px;
+
+            margin: 15px 0px;
+
+            border: 2px solid green;
+
+        }
+
+         
+ 
+
+     
+
+        /* Styling the submit button */
+
+        .button {
+
+            background-color: green;
+
+            color: white;
+
+            padding: 16px 16px;
+
+            border: none;
+
+            cursor: pointer;
+
+            width: 100%;
+
+        }
+
+         
+
+        .button:hover {
+
+            transform: scale(1.1);
+
+            transition: transform 0.3s;
+
+        }
+    </style>
+
+</head>
+
+<script>
+    $(document).ready(function(){
+        $("#f").submit(function(e)
+        {
+            e.preventDefault();
+            email=$("#email").val()
+            psw=$("#psw").val()
+            //alert(tit)
+            $.get("http://localhost:8000/ulogin/",{email:email,psw:psw}).done(function( data )
+            {
+                // $("body").html(data)
+                if(data=="failed")
+                {
+                    alert("Invalid Email or Password Please try again..")
+                    location.replace('http://localhost:8000/login')
+                    
+
+                }
+                else
+                location.replace('http://localhost:8000/home')
+            });
+        });
+    });
+</script>
+
+<body>
+
+    <div class="bg-img">
+
+       <div class="vl"></div>
+
+        <form class="container" id="f">
+             <h1>  LOGIN  </h1>
+             <h3>  Sign in to continue </h3>
+             <p>New Member? <a href="/register">Signup</a> </p>
+            <b>Email-Id</b>
+
+            <input type="email" placeholder="Email-Id Please"
+
+                    name="email" id="email" required>
+ 
+
+            <b>Password</b>
+
+            <input type="password" placeholder="Enter Password"
+
+                    name="password" id="psw" required>
+ 
+
+            <button type="submit" class="button">Login</button>
+
+
+            <p>Forgot Password? <a href="/cpass">Click Here</a> </p>
+
+        </form>
+
+    </div>
+
+</body>
+ 
+
+</html>

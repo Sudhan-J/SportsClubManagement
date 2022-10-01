@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://kit.fontawesome.com/20750ed8b5.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/static/psite/images/homeimage.png");
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  text-align: center;
+  color: azure;
+}
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+</style>  
+<body>
+
+<!-- Navbar (sit on top) -->
+<html class="w3-top">
+  <body class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="/home" class="w3-bar-item w3-button w3-wide">SHIMOGA SPORTS CLUB</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="/home" class="w3-bar-item w3-button"><i class="fas fa-home"></i>HOME</a>
+      <a href="/events" class="w3-bar-item w3-button"><i class="far fa-calendar-alt"></i> EVENTS</a>
+      <a href="/booking" class="w3-bar-item w3-button"><i class="fas fa-ticket-alt"></i> BOOKING</a>
+      <a href="/aboutus" class="w3-bar-item w3-button"> ABOUT US</a>
+      <a href="/contactus" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> REGISTER EVENT </a>
+      <a href="/login" class="w3-bar-item w3-button"><i class="fas fa-user-alt"></i> LOGOUT</a>
+    </div>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="/home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="/events" onclick="w3_close()" class="w3-bar-item w3-button">EVENTS</a>
+  <a href="/booking" onclick="w3_close()" class="w3-bar-item w3-button">BOOKING</a>
+  <a href="/aboutus" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+  <a href="/contactus" onclick="w3_close()" class="w3-bar-item w3-button">REGISTER EVENT</a>
+  <a href="/login" onclick="w3_close()" class="w3-bar-item w3-button">LOGOUT</a>
+</nav>
+      <div class="container">
+        <img src="/static/psite/images/homeimage.png" alt="Ground" class="bgimg-1">
+        <div class="centered">WELCOME TO SHIMOGA SPORTS CLUB</div>
+      </div>
+
+      <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="container">
+            <img src="/static/psite/images/homeimage.png" alt="Ground" class="bgimg-1">
+            <div class="centered">WELCOME TO SHIMOGA SPORTS CLUB</div>
+          </div>
+      </header>
+      <div>
+        <footer>
+<p>dhdhjssssssssssssssssssssssssss</p>
+        </footer>
+      </div>
+      
+      <script>
+
+  
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+        
+        function w3_open() {
+          if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+          } else {
+            mySidebar.style.display = 'block';
+          }
+        }
+        
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+        </script>
+       
+</body>
+</html>
+
+    

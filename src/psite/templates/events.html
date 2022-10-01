@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block title %}
+
+{% endblock %}
+{% block content %}
+{% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+      $.get("http://127.0.0.1:8000/fetchall/",{}).done(function(data)
+      {
+        $("#res").html(data) 
+      });
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Events</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+  body {
+    font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background:#097770 ;
+  color: white;
+  font-size: 5.5rem;
+}
+
+.kp{
+  padding: 10px;
+  background: black;
+  color: black;
+  font-size: 5.5rem;
+}
+.rrr{
+  font-size: 1.9rem;
+  font-family: 'Playfair Display', serif;
+  background-color:#e0cdbe;                       
+ 
+  
+}
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>EVENTS</h1>
+    <div class="header" id="res">
+
+  </div>
+</div>
+</body>
+</html>
+{% endblock %}

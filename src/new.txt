@@ -1,0 +1,7 @@
+asgiref==3.4.1
+Django==4.0.1
+django-cors-headers==3.11.0
+fpdf==1.7.2
+mysqlclient @ file:///E:/DBMS/src/mysqlclient-1.4.6-cp39-cp39-win_amd64.whl
+sqlparse==0.4.2
+tzdata==2021.5
